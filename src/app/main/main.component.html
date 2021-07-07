@@ -1,0 +1,17 @@
+<div class="main">
+    <h1>welcome</h1>
+    <div class="category">
+        <ul *ngFor="let category of categories">
+            <li (click)='selectedOptions.id = category.id' 
+                [ngClass]='{"selected": category.id === selectedOptions.id}'>{{category.name}}</li>
+        </ul>
+    </div>
+    <div class="difficulty">
+        <ul *ngFor="let difficulty of difficulties">
+            <li (click)='selectedOptions.difficulty = difficulty'
+                [ngClass]='{"selected": difficulty === selectedOptions.difficulty}'>{{difficulty}}</li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-outline-light" (click)='onSubmit()'
+     [ngClass]='{"disabled": !selectedOptions.id || !selectedOptions.difficulty}'>start</button>
+</div>

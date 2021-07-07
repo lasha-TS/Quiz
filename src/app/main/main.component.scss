@@ -1,0 +1,74 @@
+$bgRgba: rgba(0, 0, 0, 0.849);
+$borderRadius: 5px;
+$gradiantColor: radial-gradient(circle, red 0%, rgba(0,0,0,1) 100%);
+
+@mixin categoriesBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: $bgRgba;
+    border-radius: $borderRadius;
+}
+
+@mixin ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    width: 8.5rem;
+    height: 5rem;
+    margin: 3px;
+    color: white;
+    border: solid blue 1px;
+    border-radius: $borderRadius;
+    &:hover{
+        background: $gradiantColor;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: blue;
+    background: radial-gradient(circle, blue 0%, black 100%);
+    height: 100vh;
+    h1{
+        color: white;
+    }
+    .category{
+        @include categoriesBox;
+        width: 85vw;
+        height: auto;
+        ul{
+            @include ul;
+            li{
+                @include li;
+            }
+        }    
+    }
+    .difficulty{
+        @include categoriesBox;
+        width: 28rem;
+        height: auto;
+        ul{
+            @include ul;
+            li{
+                @include li;
+            }
+        }
+    }
+}
+
+.selected {
+    background: $gradiantColor;
+}

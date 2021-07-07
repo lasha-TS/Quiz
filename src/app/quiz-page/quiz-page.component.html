@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="box" *ngFor="let quizQuestion of quiz">
+        <p>{{quizQuestion.question}}</p>
+        <div class="buttons" *ngFor="let answer of quizQuestion.incorrect_answers"  >
+            <button (click)="trueOrFalse(quizQuestion, answer)" 
+                    [ngClass]="{'correct-anwer':  quizQuestion.isAnswered && 
+                                                  quizQuestion.correct_answer == quizQuestion.selectedAnswer && 
+                                                  quizQuestion.selectedAnswer == answer,
+                                'wrong-anwer':    quizQuestion.isAnswered && 
+                                                  quizQuestion.correct_answer != quizQuestion.selectedAnswer &&
+                                                  quizQuestion.selectedAnswer == answer}"
+                    [disabled]='quizQuestion.isAnswered'>{{answer}}</button>
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-light">Finish</button>
+</div>

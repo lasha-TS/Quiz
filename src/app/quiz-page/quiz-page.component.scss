@@ -1,0 +1,56 @@
+$gradiantBlue: radial-gradient(circle, rgba(0,52,255,1) 0%, rgba(0,0,0,1) 100%);
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.801);
+    width: 90vw;
+    padding: 20px;
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        p{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70vw;
+            height: 120px;
+            background: $gradiantBlue;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: solid 1px;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 60vw;
+            button{
+                margin-top: 8px;
+                width: 400px;
+                height: 50px;
+                background: $gradiantBlue;
+                border-radius: 10px;
+                border: solid 1px;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.correct-anwer {
+    background: green !important;
+}
+
+.wrong-anwer {
+    background: red !important; 
+}
