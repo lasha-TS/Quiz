@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService, ISelectedOptions } from '../data.service';
 
 
@@ -16,12 +16,13 @@ export class QuizPageComponent implements OnInit {
   color: string = 'white';
   quiz: any[] = [];
   selectedOptions: ISelectedOptions;
-  trueCount: any = 0;
+  trueCount: number = 0;
   allCount: number = 0;
 
   constructor(
     private _dataService: DataService,
-    private _activatedRoute: ActivatedRoute
+    private _activatedRoute: ActivatedRoute,
+    private router: Router
   ) {
     this.selectedOptions = this._activatedRoute.snapshot.queryParams as ISelectedOptions;
   }
@@ -46,6 +47,13 @@ export class QuizPageComponent implements OnInit {
       this.trueCount++;
     }
     this.allCount++;
-
+  }
+  unfinished(){
+    const conf = confirm(`You answered ${this.allCount} questions. Do you want to finish?`);
+    if(conf === true){
+      this.router.navigate(['/result'], {queryParams: {count: this.trueCount}});
+    }else{
+      this.router.navigate(['/quizPage']);
+    }
   }
 }

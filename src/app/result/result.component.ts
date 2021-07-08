@@ -12,7 +12,7 @@ export class ResultComponent implements OnInit {
   constructor(private Route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.successAnswer = this.Route.snapshot.queryParams;
+    this.successAnswer = this.Route.snapshot.queryParams.count;
   }
 
 

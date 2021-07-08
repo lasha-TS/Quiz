@@ -12,6 +12,6 @@
                 [disabled]='quizQuestion.isAnswered'>{{answer}}</button>
         </div>
     </div>
-    <button *ngIf="conf == true" (click)="unfinished()" type="button" class="btn btn-outline-dark" [routerLink]="['/result']" routerLinkActive="router-link-active" 
+    <button (click)="unfinished()" type="button" class="btn btn-outline-dark" [routerLink]="['/result']" routerLinkActive="router-link-active" 
         [queryParams]="{count: trueCount}">Finish</button>
 </div>
