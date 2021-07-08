@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-result',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result.component.scss']
 })
 export class ResultComponent implements OnInit {
+  successAnswer: any;
 
-  constructor() { }
+  constructor(private Route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.successAnswer = this.Route.snapshot.queryParams;
   }
 
 

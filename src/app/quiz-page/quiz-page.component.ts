@@ -16,7 +16,7 @@ export class QuizPageComponent implements OnInit {
   color: string = 'white';
   quiz: any[] = [];
   selectedOptions: ISelectedOptions;
-  trueCount: number = 0;
+  trueCount: any = 0;
   allCount: number = 0;
 
   constructor(
