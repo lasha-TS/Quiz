@@ -12,10 +12,10 @@
                     [disabled]='quizQuestion.isAnswered'>{{answer}}</button>
         </div>
     </div>
-    <button *ngIf="allCount === 10" type="button" class="btn btn-outline-dark" [routerLink]="['/result']" routerLinkActive="router-link-active">Finish</button>
-    <button *ngIf="allCount < 10" type="button" class="btn btn-outline-dark" [routerLink]="['/confirm']" routerLinkActive="router-link-active">Finish</button>
+    <button *ngIf="allCount === 10" type="button" class="btn btn-outline-dark" [routerLink]="['/result']" [queryParams]="trueCount">Finish</button>
+    <button *ngIf="allCount < 10" type="button" class="btn btn-outline-dark">Finish</button>
 </div>
-<div class="main">
+<!-- <div class="main">
     <div class="box">
         <h3>tqven dagrchat pasuxgaucemeli kitxvebi, gnebavt ukan dabruneba?</h3>
         <div class="buttons">
@@ -23,4 +23,4 @@
             <button type="button" class="btn btn-outline-danger">no</button>
         </div>
     </div>
-</div>
+</div> -->
