@@ -1,11 +1,20 @@
 $gradiantBlue: radial-gradient(circle, rgba(0,52,255,1) 0%, rgba(0,0,0,1) 100%);
+$fontFamily: 'Merienda One', cursive;
+
+@mixin glass {
+    box-shadow: 0 0 2px 0 blue;
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    // background: radial-gradient(circle, rgba(0, 51, 255, 0.644) 0%, rgb(0, 0, 0) 100%);
+    border: 1px solid rgb(255, 255, 255);
+}
 
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.801);
+    @include glass();
     width: 90vw;
     padding: 20px;
     .box{
@@ -27,6 +36,7 @@ $gradiantBlue: radial-gradient(circle, rgba(0,52,255,1) 0%, rgba(0,0,0,1) 100%);
             font-size: 1.2em;
             font-weight: bold;
             border: solid 1px;
+            font-family: $fontFamily;
         }
         .buttons{
             display: flex;
@@ -42,15 +52,39 @@ $gradiantBlue: radial-gradient(circle, rgba(0,52,255,1) 0%, rgba(0,0,0,1) 100%);
                 border: solid 1px;
                 color: white;
                 font-weight: bold;
+                font-family: $fontFamily;
             }
         }
     }
 }
 
+$gradiantBlue: radial-gradient(circle, rgba(0,52,255,1) 0%, rgba(0,0,0,1) 100%);
+$fontFamily: 'Fredericka the Great', cursive;
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    .box{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 60vh;
+        background: $gradiantBlue;
+        h3{
+            text-align: center;
+        }
+    }
+}
+
 .correct-anwer {
-    background: green !important;
+    background: radial-gradient(circle, green 0%, rgba(0,0,0,1) 100%) !important;
 }
 
 .wrong-anwer {
-    background: red !important; 
+    background: radial-gradient(circle, red 0%, rgba(0,0,0,1) 100%) !important; 
 }

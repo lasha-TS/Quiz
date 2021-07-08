@@ -1,0 +1,23 @@
+$gradiantBlue: radial-gradient(circle, rgba(0,52,255,1) 0%, rgba(0,0,0,1) 100%);
+$fontFamily: 'Fredericka the Great', cursive;
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .resultBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 60vw;
+        height: 90vh;
+        background: $gradiantBlue;
+        border-radius: 10px;
+        h3{
+            font-family: $fontFamily;
+            color: white;
+        }
+    }
+}

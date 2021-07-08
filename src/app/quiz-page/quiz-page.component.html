@@ -1,8 +1,8 @@
 <div class="container">
     <div class="box" *ngFor="let quizQuestion of quiz">
         <p>{{quizQuestion.question}}</p>
-        <div class="buttons" *ngFor="let answer of quizQuestion.incorrect_answers"  >
-            <button (click)="trueOrFalse(quizQuestion, answer)" 
+        <div class="buttons">
+            <button  *ngFor="let answer of quizQuestion.incorrect_answers" (click)="trueOrFalse(quizQuestion, answer)" 
                     [ngClass]="{'correct-anwer':  quizQuestion.isAnswered && 
                                                   quizQuestion.correct_answer == quizQuestion.selectedAnswer && 
                                                   quizQuestion.selectedAnswer == answer,
@@ -12,5 +12,15 @@
                     [disabled]='quizQuestion.isAnswered'>{{answer}}</button>
         </div>
     </div>
-    <button type="button" class="btn btn-outline-light">Finish</button>
+    <button *ngIf="allCount === 10" type="button" class="btn btn-outline-dark" [routerLink]="['/result']" routerLinkActive="router-link-active">Finish</button>
+    <button *ngIf="allCount < 10" type="button" class="btn btn-outline-dark" [routerLink]="['/confirm']" routerLinkActive="router-link-active">Finish</button>
+</div>
+<div class="main">
+    <div class="box">
+        <h3>tqven dagrchat pasuxgaucemeli kitxvebi, gnebavt ukan dabruneba?</h3>
+        <div class="buttons">
+            <button type="button" class="btn btn-outline-success">yes</button>
+            <button type="button" class="btn btn-outline-danger">no</button>
+        </div>
+    </div>
 </div>
