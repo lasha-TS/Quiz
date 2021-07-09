@@ -1,5 +1,9 @@
 $gradiantBlue: radial-gradient(circle, rgba(0,52,255,1) 0%, rgba(0,0,0,1) 100%);
 $fontFamily: 'Fredericka the Great', cursive;
+$fontFamilyh3: 'Merienda One', cursive;
+
+
+
 
 .container{
     display: flex;
@@ -20,6 +24,12 @@ $fontFamily: 'Fredericka the Great', cursive;
             text-align: center;
             font-family: $fontFamily;
             color: white;
+            text-shadow: 0 -2px 5px black;
+        }
+        h3{
+            font-family: $fontFamilyh3;
+            color: green;
+            text-shadow: 0 -2px 5px black;
         }
     }
 }
