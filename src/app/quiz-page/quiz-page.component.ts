@@ -49,14 +49,15 @@ export class QuizPageComponent implements OnInit {
     this.allCount++;
   }
   unfinished(){
-    const conf = confirm(`You answered ${this.allCount} questions. Do you want to finish?`);
+    
     if(this.allCount === 10){
-      this.router.navigate(['/result']);
-    }
-    if(conf === true){
       this.router.navigate(['/result'], {queryParams: {count: this.trueCount}});
     }else{
-      this.router.navigate(['/quizPage']);
+          if(confirm(`You answered ${this.allCount} questions. Do you want to finish?`)){
+      this.router.navigate(['/result'], {queryParams: {count: this.trueCount}});
     }
+    }
+
+
   }
 }
