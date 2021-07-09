@@ -89,23 +89,35 @@ $gradiantRed: radial-gradient(circle, red 0%, rgba(0,0,0,1) 100%);
 
 @media only screen and (max-width: 1000px) {
     .main{
+        width: 100vw;
         height: auto;
         .category{
+            width: 95vw;
             height: auto;
+            margin: 10px;
+            h1{
+                width: 95vw;
+            }
             ul{
                 li{
-                    width: 20rem;
-                    height: 3rem;
+                    width: 90vw;
+                    height: 2.5rem;
                 }
             }
         }
         .difficulty{
+            width: 95vw;
+            height: auto;
+            margin: 10px;
             ul{
                 li{
-                    width: 20rem;
-                    height: 3rem;
+                    width: 90vw;
+                    height: 2.5rem;
                 }
             }
+        }
+        .btn-outline-dark{
+            margin-top: 40px;
         }
     }
   }
