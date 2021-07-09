@@ -53,6 +53,7 @@ $gradiantRed: radial-gradient(circle, red 0%, rgba(0,0,0,1) 100%);
     padding: 40px;
     @include glass;
     h1{
+        text-align: center;
         font-size: 3rem;
         font-family: $fontFamilyH1;
         color: white;
@@ -85,3 +86,26 @@ $gradiantRed: radial-gradient(circle, red 0%, rgba(0,0,0,1) 100%);
 .selected {
     background: $gradiantRed;
 }
+
+@media only screen and (max-width: 1000px) {
+    .main{
+        height: auto;
+        .category{
+            height: auto;
+            ul{
+                li{
+                    width: 20rem;
+                    height: 3rem;
+                }
+            }
+        }
+        .difficulty{
+            ul{
+                li{
+                    width: 20rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+  }

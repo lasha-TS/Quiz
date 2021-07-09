@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
 
   categories: any[] = [];
   difficulties: difficulity[] = ['easy', 'medium', 'hard'];
-  selectedOptions: ISelectedOptions = { id: 0, difficulty: 'easy'}
+  selectedOptions: ISelectedOptions = { id: 0, difficulty: 'easy'};
 
   constructor(
     private _dataService: DataService,
