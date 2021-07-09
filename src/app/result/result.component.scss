@@ -6,6 +6,7 @@ $fontFamily: 'Fredericka the Great', cursive;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     .resultBox{
         display: flex;
         flex-direction: column;
@@ -22,3 +23,12 @@ $fontFamily: 'Fredericka the Great', cursive;
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .container{
+        .resultBox{
+            width: 30rem;
+            height: 30rem;
+        }
+    }
+  }
