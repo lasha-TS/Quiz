@@ -12,6 +12,6 @@
                 [ngClass]='{"selected": difficulty === selectedOptions.difficulty}'>{{difficulty}}</li>
         </ul>
     </div>
-    <button type="button" class="btn btn-outline-primary btn-lg" (click)='onSubmit()'
+    <button type="button" class="btn btn-outline-dark btn-lg" (click)='onSubmit()'
      [ngClass]='{"disabled": !selectedOptions.id || !selectedOptions.difficulty}'>Start</button>
 </div>
